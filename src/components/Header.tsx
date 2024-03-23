@@ -9,6 +9,7 @@ import {
 
 import { AddIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import SearchBar from "./SearchBar";
+import ToggleDark from "./ToggleDark";
 
 function Header() {
   return (
@@ -24,6 +25,7 @@ function Header() {
         <SearchBar />
 
         <Menu>
+          <ToggleDark />
           <MenuButton
             as={Button}
             px={4}

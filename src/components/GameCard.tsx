@@ -1,16 +1,10 @@
 import {
   Card,
-  Text,
-  Heading,
   CardBody,
+  Heading,
   Image,
-  Divider,
-  CardFooter,
-  Button,
-  ButtonGroup,
   Stack,
-  SimpleGrid,
-  Flex,
+  Text
 } from "@chakra-ui/react";
 import { Game } from "./GameGrid";
 
@@ -20,9 +14,9 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" borderRadius="10px" overflow="hidden">
+      <Image src={game.background_image} />
       <CardBody>
-        <Image src={game.background_image} borderRadius="lg" />
         <Stack mt="6" spacing="3">
           <Heading size="md">{game.name}</Heading>
           <Text>{game.description}</Text>
@@ -31,8 +25,6 @@ const GameCard = ({ game }: Props) => {
           <Text fontSize="2xl">Ratings: {game.rating}</Text>
         </Stack>
       </CardBody>
-      <Divider />
-      <CardFooter></CardFooter>
     </Card>
   );
 };
