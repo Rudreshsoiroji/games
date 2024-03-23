@@ -1,6 +1,5 @@
 import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
-import { Game } from "./GameGrid";
-
+import { Game } from "../hooks/useGames";
 interface Props {
   game: Game;
 }

@@ -1,27 +1,9 @@
-import { useEffect, useState } from "react";
-import apiClient from "../services/api-client";
 import { HStack } from "@chakra-ui/layout";
 import { Image, Text } from "@chakra-ui/react";
-
-export interface Genre {
-  id: number;
-  name: string;
-  image_background: string;
-}
-
-interface FetchGenreResponse {
-  count: number;
-  results: Genre[];
-}
+import useGenre from "../hooks/useGenre";
 
 const Genres = () => {
-  const [genres, setGenres] = useState<Genre[]>([]);
-  useEffect(() => {
-    apiClient
-      .get<FetchGenreResponse>("/genres")
-      .then((res) => setGenres(res.data.results));
-  }, []);
-
+  const genres = useGenre();
   return (
     <ul>
       <Text fontWeight="bold" fontSize={25}>
