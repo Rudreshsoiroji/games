@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Genres from "../components/Genres";
 
 const Navigation = () => {
   return (
@@ -14,6 +15,7 @@ const Navigation = () => {
           <Link to="/profile">Profile</Link>
         </li>
       </ul>
+      <Genres />
     </nav>
   );
 };

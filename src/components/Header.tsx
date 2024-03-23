@@ -20,7 +20,7 @@ function Header() {
         justifyContent: "space-between",
       }}
     >
-      <Text>RAWG</Text>
+      <Text fontSize={20}>RAWG</Text>
       <div style={{ padding: "20", margin: 20 }}>
         <SearchBar />
 

@@ -1,31 +1,29 @@
+import Homepage from "./pages/Homepage";
+import Reviews from "./pages/Reviews";
+import Errorpage from "./pages/Errorpage";
 import "./App.css";
-import { Grid, GridItem, Show } from "@chakra-ui/react";
-import GameGrid from "./components/GameGrid";
-import Header from "./components/Header";
-import Genres from "./components/Genres";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
-  return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav"
-             "side main"`,
-      }}
-    >
-      <GridItem pl="2" area={"nav"}>
-        <Header />
-      </GridItem>
-      <Show above="lg">
-        <GridItem pl="2" area={"side"}>
-          <Genres />
-        </GridItem>
-      </Show>
-      <GridItem pl="2" area={"main"}>
-        <GameGrid />
-      </GridItem>
-    </Grid>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Homepage />,
+      errorElement: <Errorpage />,
+    },
+
+    {
+      path: "Reviews",
+      element: <Reviews />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
