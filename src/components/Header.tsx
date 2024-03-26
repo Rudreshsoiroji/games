@@ -21,9 +21,8 @@ function Header() {
       }}
     >
       <Text fontSize={20}>RAWG</Text>
+      <SearchBar />
       <div style={{ padding: "20", margin: 20 }}>
-        <SearchBar />
-
         <Menu>
           <ToggleDark />
           <MenuButton

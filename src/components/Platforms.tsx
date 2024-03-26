@@ -7,7 +7,7 @@ function Platforms() {
   return (
     <ul>
       <Text fontWeight="bold" fontSize={25}>
-        Genres
+        PlatForms
       </Text>
       {Platforms.map((platform) => (
         <HStack margin={2}>

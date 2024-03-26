@@ -1,3 +1,4 @@
+import { Input } from "@chakra-ui/react";
 import { useState } from "react";
 
 function SearchBar() {
@@ -8,7 +9,8 @@ function SearchBar() {
   }
 
   return (
-    <input
+    <Input
+      width="50%"
       type="text"
       placeholder="Search"
       value={searchTerm}
