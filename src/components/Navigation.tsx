@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Genres from "../components/Genres";
+import Platforms from "./Platforms";
 
 const Navigation = () => {
   return (
@@ -15,6 +16,7 @@ const Navigation = () => {
           <Link to="/profile">Profile</Link>
         </li>
       </ul>
+      <Platforms />
       <Genres />
     </nav>
   );
